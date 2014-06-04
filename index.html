@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <!-- Streamhub (Have to use 2.5.2 for maps) -->
+        <script src="http://cdn.livefyre.com/libs/sdk/v2.6.9/streamhub-sdk.min.js"></script>
+        <script src="http://cdn.livefyre.com/libs/apps/cheung31/streamhub-map/v1.1.0-build.43/streamhub-map.min.js"></script>
+        <link rel="stylesheet" href="http://cdn.livefyre.com/libs/sdk/v2.6.9/streamhub-sdk.min.css" />
+        <!-- End Streamhub -->
+
+        <!-- Bootstrap 3 -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <!-- End Bootstrap 3 -->
+
+        <link rel="stylesheet" href="css/animate.css" />
+        <link rel="stylesheet" href="fonts/futura/futura.css" />
+        <link rel="stylesheet" href="fonts/tradegothic/trade.css" />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <img class="bg-img" src="imgs/bg.png" />
+        <div id="carousel" class="carousel slide">
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="active item lf-map" data-slide-duration="8000">
+                    <div class="slate">
+                        <div id="lf-map"></div>
+                    </div>
+                </div>
+                <div class="item avatar-wall-container" data-slide-duration="18000">
+                    <div id="avatar-wall" class="slate"></div>
+                    <link rel="stylesheet" href="css/avatar-wall.css" />
+                    <div class="slate">
+                        <div class="slate-content" style="position: relative; z-index: 10;">
+                            <!-- <h1 class="hero-text">Welcome Home, Livefyre!</h1> -->
+                            <img class="hero-image" src="imgs/Welcome_Home.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="item lf-feed-1" data-slide-duration="18000">
+                    <div class="feed-container">
+                        <div id="feed1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- avatar wall scripts -->
+        <script type="text/javascript" src="js/avatar-content-view.js"></script>
+        <script type="text/javascript" src="js/avatar-wall-view.js"></script>
+        <!-- End avatar wall scripts -->
+
+        <script src="config.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
