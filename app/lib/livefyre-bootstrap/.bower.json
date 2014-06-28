@@ -1,0 +1,32 @@
+{
+  "name": "livefyre-bootstrap",
+  "version": "0.3.3",
+  "main": [
+    "./src/main.js"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "sinon-chai": "~2.4.0",
+    "sinonjs": "~1.7.3",
+    "view": "git://github.com/Livefyre/view.git#~1.0",
+    "event-emitter": "git://github.com/Livefyre/event-emitter.git"
+  },
+  "devDependencies": {
+    "cajon": "git://github.com/requirejs/cajon.git#~0.1.11",
+    "chai": "~1.8.1",
+    "less.js": "~1.5.1",
+    "require-css": "~0.1.1",
+    "mocha": "~1.16.2",
+    "almond": "~0.2.9"
+  },
+  "homepage": "https://github.com/Livefyre/livefyre-bootstrap",
+  "_release": "0.3.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.3",
+    "commit": "a842c17c36be141cf0a2d245246f2fc12b71040e"
+  },
+  "_source": "git://github.com/Livefyre/livefyre-bootstrap.git",
+  "_target": "v0.3.3",
+  "_originalSource": "git://github.com/Livefyre/livefyre-bootstrap.git"
+}

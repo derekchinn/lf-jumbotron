@@ -1,0 +1,632 @@
+@import (reference) "./variables";
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "fycons";
+  src:url("@{icon-font-path}@{fycon-font-name}.eot");
+  src:url("@{icon-font-path}@{fycon-font-name}.eot?#iefix") format("embedded-opentype"),
+    url("@{icon-font-path}@{fycon-font-name}.woff") format("woff"),
+    url("@{icon-font-path}@{fycon-font-name}.ttf") format("truetype"),
+    url("@{icon-font-path}@{fycon-font-name}.svg#fycons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fycon-"]:before,
+[class*=" fycon-"]:before {
+  font-family: "fycons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: inherit;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn, .btn-lg, .btn-sm {
+  [class^="fycon-"]:before,
+  [class*=" fycon-"]:before {
+    margin-top: -2px;
+  }
+}
+
+.fycon-lg {
+  font-size: 2em;
+}
+
+.fycon-sm {
+  font-size: 0.5em;
+}
+
+.fycon-inherit {
+  font-size: inherit;
+}
+
+.fycon-action-etc:before {
+  content: "\e000";
+}
+.fycon-action-favorite:before {
+  content: "\e001";
+}
+.fycon-action-favorite-empty:before {
+  content: "\e002";
+}
+.fycon-action-favorite-half:before {
+  content: "\e003";
+}
+.fycon-action-helpful:before {
+  content: "\e004";
+}
+.fycon-action-like:before {
+  content: "\e005";
+}
+.fycon-action-reply:before {
+  content: "\e006";
+}
+.fycon-action-reply-1:before {
+  content: "\e007";
+}
+.fycon-action-retweet:before {
+  content: "\e008";
+}
+.fycon-action-retweet-1:before {
+  content: "\e009";
+}
+.fycon-action-share:before {
+  content: "\e00a";
+}
+.fycon-action-unhelpful:before {
+  content: "\e00b";
+}
+.fycon-action-view:before {
+  content: "\e00c";
+}
+.fycon-admin-ban:before {
+  content: "\e00d";
+}
+.fycon-admin-bozo:before {
+  content: "\e00e";
+}
+.fycon-admin-delete:before {
+  content: "\e00f";
+}
+.fycon-admin-flag:before {
+  content: "\e010";
+}
+.fycon-alert:before {
+  content: "\e011";
+}
+.fycon-analytics:before {
+  content: "\e012";
+}
+.fycon-archive:before {
+  content: "\e013";
+}
+.fycon-arrow-back:before {
+  content: "\e014";
+}
+.fycon-arrow-down:before {
+  content: "\e015";
+}
+.fycon-arrow-down-circle:before {
+  content: "\e016";
+}
+.fycon-arrow-left:before {
+  content: "\e017";
+}
+.fycon-arrow-right:before {
+  content: "\e018";
+}
+.fycon-arrow-up:before {
+  content: "\e019";
+}
+.fycon-arrow-up-circle:before {
+  content: "\e01a";
+}
+.fycon-article:before {
+  content: "\e01b";
+}
+.fycon-bell:before {
+  content: "\e01c";
+}
+.fycon-bolt:before {
+  content: "\e01d";
+}
+.fycon-calendar:before {
+  content: "\e01e";
+}
+.fycon-check:before {
+  content: "\e01f";
+}
+.fycon-check-funky:before {
+  content: "\e020";
+}
+.fycon-clock:before {
+  content: "\e021";
+}
+.fycon-collections:before {
+  content: "\e022";
+}
+.fycon-composer-emoticons:before {
+  content: "\e023";
+}
+.fycon-composer-format1:before {
+  content: "\e024";
+}
+.fycon-composer-format2:before {
+  content: "\e025";
+}
+.fycon-composer-mention:before {
+  content: "\e026";
+}
+.fycon-composer-photo:before {
+  content: "\e027";
+}
+.fycon-composer-sad:before {
+  content: "\e028";
+}
+.fycon-connect:before {
+  content: "\e029";
+}
+.fycon-connection-lost:before {
+  content: "\e02a";
+}
+.fycon-content:before {
+  content: "\e02b";
+}
+.fycon-conversation:before {
+  content: "\e02c";
+}
+.fycon-copy-to-clipboard:before {
+  content: "\e02d";
+}
+.fycon-download:before {
+  content: "\e02e";
+}
+.fycon-duplicate:before {
+  content: "\e02f";
+}
+.fycon-edit:before {
+  content: "\e030";
+}
+.fycon-edit-2:before {
+  content: "\e031";
+}
+.fycon-email:before {
+  content: "\e032";
+}
+.fycon-embed:before {
+  content: "\e033";
+}
+.fycon-expand:before {
+  content: "\e034";
+}
+.fycon-experiences:before {
+  content: "\e035";
+}
+.fycon-export:before {
+  content: "\e036";
+}
+.fycon-eye:before {
+  content: "\e037";
+}
+.fycon-feature:before {
+  content: "\e038";
+}
+.fycon-film:before {
+  content: "\e039";
+}
+.fycon-form-checkbox-active:before {
+  content: "\e03a";
+}
+.fycon-form-checkbox-empty:before {
+  content: "\e03b";
+}
+.fycon-form-checkbox-partial:before {
+  content: "\e03c";
+}
+.fycon-form-radio-active:before {
+  content: "\e03d";
+}
+.fycon-form-radio-empty:before {
+  content: "\e03e";
+}
+.fycon-format-bold:before {
+  content: "\e03f";
+}
+.fycon-format-italic:before {
+  content: "\e040";
+}
+.fycon-format-link:before {
+  content: "\e041";
+}
+.fycon-format-link-horiz:before {
+  content: "\e042";
+}
+.fycon-format-orderedlist:before {
+  content: "\e043";
+}
+.fycon-format-strikethrough:before {
+  content: "\e044";
+}
+.fycon-format-underline:before {
+  content: "\e045";
+}
+.fycon-format-unorderedlist:before {
+  content: "\e046";
+}
+.fycon-groups:before {
+  content: "\e047";
+}
+.fycon-groups-add:before {
+  content: "\e048";
+}
+.fycon-hamburger:before {
+  content: "\e049";
+}
+.fycon-home:before {
+  content: "\e04a";
+}
+.fycon-icon-chat:before {
+  content: "\e04b";
+}
+.fycon-icon-comments:before {
+  content: "\e04c";
+}
+.fycon-icon-counter:before {
+  content: "\e04d";
+}
+.fycon-icon-feed:before {
+  content: "\e04e";
+}
+.fycon-icon-liveblog:before {
+  content: "\e04f";
+}
+.fycon-icon-map:before {
+  content: "\e050";
+}
+.fycon-icon-modq:before {
+  content: "\e051";
+}
+.fycon-icon-more:before {
+  content: "\e052";
+}
+.fycon-icon-reviews:before {
+  content: "\e053";
+}
+.fycon-icon-sidenotes:before {
+  content: "\e054";
+}
+.fycon-icon-storify:before {
+  content: "\e055";
+}
+.fycon-icon-wall:before {
+  content: "\e056";
+}
+.fycon-information:before {
+  content: "\e057";
+}
+.fycon-listening-left:before {
+  content: "\e058";
+}
+.fycon-listening-right:before {
+  content: "\e059";
+}
+.fycon-location:before {
+  content: "\e05a";
+}
+.fycon-locked:before {
+  content: "\e05b";
+}
+.fycon-logo-android:before {
+  content: "\e05c";
+}
+.fycon-logo-apple:before {
+  content: "\e05d";
+}
+.fycon-logo-comments:before {
+  content: "\e05e";
+}
+.fycon-logo-counter:before {
+  content: "\e05f";
+}
+.fycon-logo-developers:before {
+  content: "\e060";
+}
+.fycon-logo-feed:before {
+  content: "\e061";
+}
+.fycon-logo-liveblog:before {
+  content: "\e062";
+}
+.fycon-logo-livefyre:before {
+  content: "\e063";
+}
+.fycon-logo-map:before {
+  content: "\e064";
+}
+.fycon-logo-mediawall:before {
+  content: "\e065";
+}
+.fycon-logo-modq:before {
+  content: "\e066";
+}
+.fycon-logo-sidenotes:before {
+  content: "\e067";
+}
+.fycon-logo-storify:before {
+  content: "\e068";
+}
+.fycon-logo-streamhub:before {
+  content: "\e069";
+}
+.fycon-logo-windows:before {
+  content: "\e06a";
+}
+.fycon-minimize:before {
+  content: "\e06b";
+}
+.fycon-minus:before {
+  content: "\e06c";
+}
+.fycon-mobile:before {
+  content: "\e06d";
+}
+.fycon-modal-arrow-left:before {
+  content: "\e06e";
+}
+.fycon-modal-arrow-right:before {
+  content: "\e06f";
+}
+.fycon-nav-close:before {
+  content: "\e070";
+}
+.fycon-nav-expand:before {
+  content: "\e071";
+}
+.fycon-network:before {
+  content: "\e072";
+}
+.fycon-person:before {
+  content: "\e073";
+}
+.fycon-photograph:before {
+  content: "\e074";
+}
+.fycon-plane:before {
+  content: "\e075";
+}
+.fycon-play:before {
+  content: "\e076";
+}
+.fycon-plus:before {
+  content: "\e077";
+}
+.fycon-question:before {
+  content: "\e078";
+}
+.fycon-recent:before {
+  content: "\e079";
+}
+.fycon-redo:before {
+  content: "\e07a";
+}
+.fycon-refresh:before {
+  content: "\e07b";
+}
+.fycon-search:before {
+  content: "\e07c";
+}
+.fycon-settings-admin:before {
+  content: "\e07d";
+}
+.fycon-settings-feedback:before {
+  content: "\e07e";
+}
+.fycon-settings-gear:before {
+  content: "\e07f";
+}
+.fycon-settings-logout:before {
+  content: "\e080";
+}
+.fycon-settings-me:before {
+  content: "\e081";
+}
+.fycon-settings-switch:before {
+  content: "\e082";
+}
+.fycon-source-drupal:before {
+  content: "\e083";
+}
+.fycon-source-facebook:before {
+  content: "\e084";
+}
+.fycon-source-flickr:before {
+  content: "\e085";
+}
+.fycon-source-foursquare:before {
+  content: "\e086";
+}
+.fycon-source-google:before {
+  content: "\e087";
+}
+.fycon-source-googleplus:before {
+  content: "\e088";
+}
+.fycon-source-instagram:before {
+  content: "\e089";
+}
+.fycon-source-linkedin:before {
+  content: "\e08a";
+}
+.fycon-source-livefyre:before {
+  content: "\e08b";
+}
+.fycon-source-pinterest:before {
+  content: "\e08c";
+}
+.fycon-source-reddit:before {
+  content: "\e08d";
+}
+.fycon-source-rss:before {
+  content: "\e08e";
+}
+.fycon-source-soundcloud:before {
+  content: "\e08f";
+}
+.fycon-source-storify:before {
+  content: "\e090";
+}
+.fycon-source-tumblr:before {
+  content: "\e091";
+}
+.fycon-source-twitter:before {
+  content: "\e092";
+}
+.fycon-source-twitter2:before {
+  content: "\e093";
+}
+.fycon-source-vimeo:before {
+  content: "\e094";
+}
+.fycon-source-vine:before {
+  content: "\e095";
+}
+.fycon-source-wordpress:before {
+  content: "\e096";
+}
+.fycon-source-youtube1:before {
+  content: "\e097";
+}
+.fycon-source-youtube2:before {
+  content: "\e098";
+}
+.fycon-spaceship:before {
+  content: "\e099";
+}
+.fycon-style:before {
+  content: "\e09a";
+}
+.fycon-table-of-contents:before {
+  content: "\e09b";
+}
+.fycon-tablet:before {
+  content: "\e09c";
+}
+.fycon-tag:before {
+  content: "\e09d";
+}
+.fycon-tv-4k:before {
+  content: "\e09e";
+}
+.fycon-tv-broadcast:before {
+  content: "\e09f";
+}
+.fycon-tv-hd:before {
+  content: "\e0a0";
+}
+.fycon-tv-sd:before {
+  content: "\e0a1";
+}
+.fycon-undo:before {
+  content: "\e0a2";
+}
+.fycon-unlocked:before {
+  content: "\e0a3";
+}
+.fycon-verified:before {
+  content: "\e0a4";
+}
+.fycon-video:before {
+  content: "\e0a5";
+}
+.fycon-website:before {
+  content: "\e0a6";
+}
+.fycon-website-add:before {
+  content: "\e0a7";
+}
+.fycon-write:before {
+  content: "\e0a8";
+}
+.fycon-x:before {
+  content: "\e0a9";
+}
+.fycon-logo-snap:before {
+  content: "\e0aa";
+}
+
+// Colored Icons
+.colored {
+  &.fycon-source-drupal:before {
+    color: @brand-drupal;
+  }
+  &.fycon-source-facebook:before {
+    color: @brand-facebook;
+  }
+  &.fycon-source-flickr:before {
+    color: @brand-flickr;
+  }
+  &.fycon-source-foursquare:before {
+    color: @brand-foursquare;
+  }
+  &.fycon-source-google:before {
+    color: @brand-google;
+  }
+  &.fycon-source-googleplus:before {
+    color: @brand-gplus;
+  }
+  &.fycon-source-instagram:before {
+    color: @brand-instagram;
+  }
+  &.fycon-source-linkedin:before {
+    color: @brand-linkedin;
+  }
+  &.fycon-source-livefyre:before {
+    color: @lf-orange;
+  }
+  &.fycon-source-pinterest:before {
+    color: @brand-pinterest;
+  }
+  &.fycon-source-reddit:before {
+    color: @brand-reddit;
+  }
+  &.fycon-source-rss:before {
+    color: @lf-orange;
+  }
+  &.fycon-source-soundcloud:before {
+    color: @brand-soundcloud;
+  }
+  &.fycon-source-storify:before {
+    color: @storify-blue;
+  }
+  &.fycon-source-tumblr:before {
+    color: @brand-tumblr;
+  }
+  &.fycon-source-twitter:before {
+    color: @brand-twitter;
+  }
+  &.fycon-source-twitter2:before {
+    color: @brand-twitter;
+  }
+  &.fycon-source-vimeo:before {
+    color: @brand-vimeo;
+  }
+  &.fycon-source-vine:before {
+    color: @brand-vine;
+  }
+  &.fycon-source-wordpress:before {
+    color: @brand-wordpress;
+  }
+  &.fycon-source-youtube1:before {
+    color: @brand-youtube;
+  }
+  &.fycon-source-youtube2:before {
+    color: @brand-youtube;
+  }
+}

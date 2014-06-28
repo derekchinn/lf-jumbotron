@@ -1,0 +1,22 @@
+{
+  "name": "livefyre-bootstrap",
+  "version": "0.3.3",
+  "main": [
+    "./src/main.js"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "sinon-chai": "~2.4.0",
+    "sinonjs": "~1.7.3",
+    "view": "git://github.com/Livefyre/view.git#~1.0",
+    "event-emitter": "git://github.com/Livefyre/event-emitter.git"
+  },
+  "devDependencies": {
+    "cajon": "git://github.com/requirejs/cajon.git#~0.1.11",
+    "chai": "~1.8.1",
+    "less.js": "~1.5.1",
+    "require-css": "~0.1.1",
+    "mocha": "~1.16.2",
+    "almond": "~0.2.9"
+  }
+}

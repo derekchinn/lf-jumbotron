@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../lib/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="../lib/mocha/mocha.js"></script>
+    <script src="../lib/cajon/cajon.js"></script>
+    <script src="../requirejs.conf.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script>
+      require.config({
+        baseUrl: '../'
+      });
+      require(['tests/spec-list'], function (specs) {
+        // prepend tests package name
+        specs = specs.map(function (spec) {
+          return 'tests/spec/' + spec;
+        });
+        require(specs, function () {
+          if (window.mochaPhantomJS) {
+            mochaPhantomJS.run();
+          } else {
+            mocha.run();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

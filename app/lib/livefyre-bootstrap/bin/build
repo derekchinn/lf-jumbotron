@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Directory of this script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT=$DIR/../
+
+mkdir -p $ROOT/dist
+
+# build the compiled versions
+$ROOT/node_modules/less/bin/lessc src/styles/all.less > dist/all.css
+node $ROOT/r.js -o tools/build.js
+node $ROOT/r.js -o tools/build.cdn.js
+csso $ROOT/dist/all.css $ROOT/dist/livefyre-bootstrap.min.css
+
+# copy over some useful files
+cp -R $ROOT/src/fonts dist/
+cp -R $ROOT/lib/bootstrap/dist/fonts dist/
+
