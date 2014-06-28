@@ -142,7 +142,7 @@ function (Collection, ListView, MapView) {
             if ($nextSlide.hasClass('avatar-wall-container')) {
                 var view = self._apps[nextIndex];
                 if (view) {
-                    //view.restartLoop();
+                    view.restartLoop();
                 }
             }
 
@@ -158,11 +158,11 @@ function (Collection, ListView, MapView) {
                 if (view) {
                     self._rotateFeed(1);
                 }
-                // else if (!view && self._firstRun) {
-                //     self._activateCollection(self._index);
-                //     self._rotateFeed(1);
-                //     self._firstRun = false;
-                // }
+                else if (!view && self._firstRun) {
+                    self._activateCollection(self._index);
+                    self._rotateFeed(1);
+                    self._firstRun = false;
+                }
             }
             if (self.$activeSlide.hasClass('lf-map')) {
                 // $(window).trigger('resize');
@@ -245,9 +245,8 @@ function (Collection, ListView, MapView) {
                 $contentEls.eq(0).find('article').show();
             } else {
                 $contentEls.eq(0).find("article").fadeOut("slow", function () {
-                    $contentEls.eq(1).find("article").fadeIn("slow", function() {
-                         $contentEls.eq(0).appendTo($el.find(".hub-list"));
-                    });
+                    $contentEls.eq(0).appendTo($el.find(".hub-list"));
+                    $contentEls.eq(1).find("article").fadeIn("slow", function() {} );
                 });
             }
         };
