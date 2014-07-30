@@ -89,11 +89,13 @@ function (Collection, ListView, MapView) {
 
         var view;
         var slideEl = this._slideEls.eq(slideIndex);
-        if (slideEl.hasClass('avatar-wall-container')) {
-            view = this.initCounterWall();
-        } else if (slideEl.hasClass('lf-feed-1')) {
-            view = this.initFeed1();
+
+        if (slideEl.hasClass('business-screen')) {
+            view = this.initBusiness();
+        } else if (slideEl.hasClass('science-screen')) {
+            view = this.initScience();
         }
+        
         // Note: initMap invoked in endSlideTransitionEvent callback, as 
         // Leaflet expects a visible parent div to render within.
 
@@ -153,24 +155,27 @@ function (Collection, ListView, MapView) {
             }, 2000);
 
             // Operations on active slide
-            if (self.$activeSlide.hasClass('lf-feed-1')) {
+            if (self.$activeSlide.hasClass('business-screen')) {
                 var view = self._apps[self._index];
                 if (view) {
-                    self._rotateFeed(1);
+                    self._rotateFeed(3);
                 }
                 else if (!view && self._firstRun) {
                     self._activateCollection(self._index);
-                    self._rotateFeed(1);
+                    self._rotateFeed(3);
                     self._firstRun = false;
                 }
             }
-            if (self.$activeSlide.hasClass('lf-map')) {
-                // $(window).trigger('resize');
-                if (self._apps[self._index]) {
-                   return;
+            if (self.$activeSlide.hasClass('science-screen')) {
+                var view = self._apps[self._index];
+                if (view) {
+                    self._rotateFeed(4);
                 }
-                var view = self.initMap();
-                self._apps[self._index] = view;
+                else if (!view && self._firstRun) {
+                    self._activateCollection(self._index);
+                    self._rotateFeed(4);
+                    self._firstRun = false;
+                }
             }
 
             var slideDuration = self.$activeSlide.attr('data-slide-duration');
@@ -212,28 +217,29 @@ function (Collection, ListView, MapView) {
         return view;
     };
 
-    Slideshow.prototype.initCounterWall = function () {
+    Slideshow.prototype.initBusiness = function() {
+        var $el = $('#feed3');
         var view = this._initView({
-            config: this._config.counterWall,
-            collection: new Collection(this._config.counterWall),
-            el: $('#avatar-wall')[0],
-            view: AvatarWallView
-        });
-
-        return view;
-    };
-
-    Slideshow.prototype.initFeed1 = function () {
-        var $el = $('#feed1');
-        var view = this._initView({
-            config: this._config.listFeed1,
-            collection: new Collection(this._config.listFeed1),
+            config: this._config.businessCollection,
+            collection: new Collection(this._config.businessCollection),
             el: $el[0],
-            view: ListView
+            view:ListView
         });
 
         return view;
-    };
+    }
+
+    Slideshow.prototype.initScience= function() {
+        var $el = $('#feed4');
+        var view = this._initView({
+            config: this._config.scienceCollection,
+            collection: new Collection(this._config.scienceCollection),
+            el: $el[0],
+            view:ListView
+        });
+
+        return view;
+    }
 
     Slideshow.prototype._rotateFeed = function (feedIndex) {
         var fn = function () {
@@ -241,7 +247,7 @@ function (Collection, ListView, MapView) {
             var $contentEls = $el.find('.hub-content-container');
 
             // If there's just 1 piece of content, show it
-            if ($contentEls == 1) {
+            if ($contentEls != 1) {
                 $contentEls.eq(0).find('article').show();
             } else {
                 $contentEls.eq(0).find("article").fadeOut("slow", function () {
