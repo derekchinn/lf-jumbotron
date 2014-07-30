@@ -247,7 +247,7 @@ function (Collection, ListView, MapView) {
             var $contentEls = $el.find('.hub-content-container');
 
             // If there's just 1 piece of content, show it
-            if ($contentEls != 1) {
+            if ($contentEls == 1) {
                 $contentEls.eq(0).find('article').show();
             } else {
                 $contentEls.eq(0).find("article").fadeOut("slow", function () {
