@@ -10,11 +10,11 @@ Barring a couple of formatting issues (see below) the project as it stands suppo
 
 Business screen
 
-![Business Screen](/relative/path/to/img.jpg?raw=true "WILL FIX THIS")
+![Business Screen](https://github.com/derekchinn/lf-jumbotron/blob/dynamic-w/-new-screens/imgs/business-screenshot.png?raw=true "Business Screen")
 
 Science Screen
 
-![Science Screen](/relative/path/to/img.jpg?raw=true "WILL FIX THIS")
+![Science Screen](https://github.com/derekchinn/lf-jumbotron/blob/dynamic-w/-new-screens/imgs/science-screenshot.png?raw=true "Science Screen")
 
 ---
 
